@@ -1,3 +1,11 @@
+# Screenshots
+
+**Dashboard**
+![Dashboard](./screenshots/dashboard.png)
+
+**Working on a C++ project**
+![Dashboard](./screenshots/editing_mode.png)
+
 # The Story
 
 I have been familiar with VIM motions for almost 6 months now, using them daily in all the IDEs; however, It was about time I change fully to neovim. I have tried the distrubtion of [NvChad](https://nvchad.com/) with some dotfiles online to support the _clangd_ language server and _nvim-dap_ for debugging my **C++** projects
