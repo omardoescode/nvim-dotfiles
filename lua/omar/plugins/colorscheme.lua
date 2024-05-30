@@ -136,4 +136,13 @@ return {
 			})
 		end,
 	},
+	{
+		"sainnhe/sonokai",
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_transparent_background = vim.g.transparent
+			vim.g.sonokai_enable_italic = 1
+			vim.g.sonokai_style = "andromeda"
+		end,
+	},
 }

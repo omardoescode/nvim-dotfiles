@@ -9,6 +9,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.breakindent = true
 opt.wrap = true
 
 -- search settings
@@ -30,7 +31,9 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- transparent effect
-vim.g.transparent = false
+vim.g.transparent = true
 
 -- conceal level
 opt.conceallevel = 2
+
+opt.scrolloff = 5 -- scrolloff option

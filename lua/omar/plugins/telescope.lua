@@ -9,7 +9,6 @@ return {
 		"debugloop/telescope-undo.nvim",
 		"andrew-george/telescope-themes",
 		"AckslD/nvim-neoclip.lua",
-
 		"ibhagwan/fzf-lua",
 	},
 	config = function()
@@ -47,7 +46,6 @@ return {
 		keymap.set("n", "<leader>fn", "<cmd>Telescope neoclip<cr>", { desc = "Clipboard Manager" })
 		keymap.set("n", "<leader>:", "<cmd>Telescope command_history<cr>", { desc = "Command History" })
 		keymap.set("n", "<leader>th", "<cmd>Telescope themes<cr>", { desc = "Change Themes" })
-
 		require("neoclip").setup({})
 	end,
 }
