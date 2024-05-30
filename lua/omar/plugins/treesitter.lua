@@ -4,6 +4,7 @@ return {
 	build = ":TSUpdate",
 	dependencies = {
 		"windwp/nvim-ts-autotag",
+		"tree-sitter-grammars/tree-sitter-markdown",
 	},
 	config = function()
 		-- import nvim-treesitter plugin

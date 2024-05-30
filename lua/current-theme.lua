@@ -1,1 +1,1 @@
-vim.cmd("colorscheme solarized-osaka-day")
+vim.cmd("colorscheme catppuccin-frappe")

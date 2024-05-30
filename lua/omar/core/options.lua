@@ -31,3 +31,6 @@ opt.splitbelow = true
 
 -- transparent effect
 vim.g.transparent = false
+
+-- conceal level
+opt.conceallevel = 2

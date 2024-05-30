@@ -136,4 +136,5 @@ return {
 			})
 		end,
 	},
+	{ "sainnhe/sonokai" },
 }
