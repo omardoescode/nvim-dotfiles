@@ -6,9 +6,6 @@ return {
 		{ "nvim-lua/popup.nvim" },
 		{ "nvim-lua/plenary.nvim" },
 	},
-	keys = {
-		{ "n", "<leader>ch", ":Cheatsheet" },
-	},
 	config = function()
 		local ctactions = require("cheatsheet.telescope.actions")
 		require("cheatsheet").setup({
