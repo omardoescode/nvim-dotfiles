@@ -33,7 +33,6 @@ opt.splitbelow = true
 -- transparent effect
 vim.g.transparent = true
 
--- conceal level
-opt.conceallevel = 2
+opt.conceallevel = 2 -- conceal level
 
 opt.scrolloff = 5 -- scrolloff option
