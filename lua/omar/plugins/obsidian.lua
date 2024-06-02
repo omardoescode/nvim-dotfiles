@@ -2,14 +2,14 @@ return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = false,
-	ft = "markdown",
+	-- ft = "markdown",
 	-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
 	event = {
 		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
 		"BufReadPre "
 			.. vim.fn.expand("~")
-			.. "/Dropbox/Obsidian/Personal/**.md",
-		"BufNewFile " .. vim.fn.expand("~") .. "/Dropbox/Obsidian/Personal/**.md",
+			.. "/vault/**.md",
+		"BufNewFile " .. vim.fn.expand("~") .. "/vault/**.md",
 	},
 	dependencies = {
 		-- Required.
@@ -39,7 +39,7 @@ return {
 		workspaces = {
 			{
 				name = "personal",
-				path = "~/Dropbox/Obsidian/Personal/",
+				path = "~/vault/",
 			},
 		},
 		daily_notes = {
@@ -152,6 +152,11 @@ return {
 			"<leader>or",
 			":ObsidianRename<cr>",
 			desc = "Rename current obsidian file",
+		},
+		{
+			"<leader>oo",
+			":ObsidianOpen<cr>",
+			desc = "Open in Obsidian App",
 		},
 	},
 }

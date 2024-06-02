@@ -22,6 +22,16 @@ return {
 
 		telescope.setup({
 			defaults = {
+				vimgrep_arguments = {
+					"rg",
+					"-L",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
