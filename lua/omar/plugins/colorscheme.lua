@@ -145,4 +145,17 @@ return {
 			vim.g.sonokai_style = "andromeda"
 		end,
 	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		priority = 1000,
+	},
+	{
+		"Shatur/neovim-ayu",
+		name = "ayu",
+		priority = 1000,
+	},
+	"rebelot/kanagawa.nvim",
+	"marko-cerovac/material.nvim",
+	"ellisonleao/gruvbox.nvim",
 }

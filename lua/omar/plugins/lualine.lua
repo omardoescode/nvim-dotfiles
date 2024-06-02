@@ -52,9 +52,15 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = "catppuccin",
+				icons_enabled = true,
+				component_separators = "|",
+				section_separators = "",
+				theme = "sonokai",
 			},
 			sections = {
+				lualine_a = {
+					"buffers",
+				},
 				lualine_x = {
 					{
 						lazy_status.updates,
