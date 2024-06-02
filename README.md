@@ -21,6 +21,7 @@ These dotfiles are inspired by [Josean Martinez](https://github.com/josean-dev) 
    This is important for **telescope** to work efficiently
 
 2. [**Nerd font**](https://www.nerdfonts.com/) as your terminal font
+3. **Lazy git** to work with the plugin **lazy-git**
 
 # Installation
 
@@ -77,6 +78,15 @@ Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 # Start your journey
 nvim
 ```
+
+# Todo
+
+- [x] Use the plugin Harpoon2 Made by the great (ThePrimeagen)[https://www.youtube.com/c/theprimeagen]
+- [ ] Install a debugger on neovim
+- [ ] Install a plugin to take aesthetic screenshots of code
+- [ ] **Most Importantly**, escape the hell of neovim config. It's about coding after all
+
+  I will just work on adding more themes and more support on this config as I need. Maybe I will change this after a minimum of 6 months
 
 # Contact Me
 
