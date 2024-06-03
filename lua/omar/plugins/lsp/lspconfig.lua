@@ -145,7 +145,10 @@ return {
 					},
 				})
 			end,
-			-- TODO: Add a special handler for the clangd server
+			-- TODO:
+			-- Add a special handler for the clangd server
+			-- Don't forget adding clang-tidy
+			-- https://github.com/fitrh/init.nvim/blob/7127fbef569ee498b1cbfae62ef372050b07afbc/lua/lsp/config/clangd.lua#L14
 		})
 	end,
 }

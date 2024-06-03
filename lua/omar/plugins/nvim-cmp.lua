@@ -1,9 +1,12 @@
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
+	build = ":Codeium Auth",
 	dependencies = {
+		"nvim-lua/plenary.nvim",
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
+		"Exafunction/codeium.nvim", -- AI
 		{
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
@@ -46,6 +49,7 @@ return {
 			-- sources for autocompletion
 			-- Priotrized by order in here
 			sources = cmp.config.sources({
+				{ name = "codeium", priority = 100 },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer

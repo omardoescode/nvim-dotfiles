@@ -82,8 +82,16 @@ nvim
 # Todo
 
 - [x] Use the plugin Harpoon2 Made by the great (ThePrimeagen)[https://www.youtube.com/c/theprimeagen]
+- [x] Create random headers for the dashboard
+- [x] Install an AI assistant (Codeium)
+- [ ] Learn how to use quickfix lists in a real project (& (folke/trouble.nvim))
+- [ ] Add a special handler for clangd
+
+  It has to support clang-tidy as well
+
 - [ ] Install a debugger on neovim
 - [ ] Install a plugin to take aesthetic screenshots of code
+- [ ] create obsidian callouts snippets in neovim
 - [ ] **Most Importantly**, escape the hell of neovim config. It's about coding after all
 
   I will just work on adding more themes and more support on this config as I need. Maybe I will change this after a minimum of 6 months

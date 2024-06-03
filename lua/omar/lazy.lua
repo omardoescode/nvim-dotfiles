@@ -21,3 +21,5 @@ require("lazy").setup({ { import = "omar.plugins" }, { import = "omar.plugins.ls
 		notify = false,
 	},
 })
+
+vim.keymap.set("n", "<leader>ll", ":Lazy<cr>", { desc = "Pacakge manager" })
