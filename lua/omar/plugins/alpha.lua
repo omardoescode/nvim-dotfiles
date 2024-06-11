@@ -13,6 +13,7 @@ return {
 		math.randomseed(os.time())
 		local ascii_arts = require("omar.headers")
 		dashboard.section.header.val = ascii_arts[math.random(#ascii_arts)]
+		--
 		-- Set menu
 		dashboard.section.buttons.val = {
 			dashboard.button("e", "  New File", "<cmd>ene<CR>"),

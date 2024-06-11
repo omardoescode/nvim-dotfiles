@@ -55,7 +55,6 @@ return {
 				icons_enabled = true,
 				component_separators = "|",
 				section_separators = "",
-				theme = "sonokai",
 			},
 			sections = {
 				lualine_a = {

@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 keymap.set("n", "x", '"_x') -- delete without putting in register
-keymap.set("n", "~", "~h")
 keymap.set("i", "jk", "<ESC>", { desc = "Exit Insert Mode with jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear Search Highlights" })
 

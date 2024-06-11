@@ -36,7 +36,7 @@ return {
 			exclude_groups = {}, -- table: groups you don't want to clear
 		})
 		require("transparent").clear_prefix("BufferLine")
-		require("transparent").clear_prefix("lualine")
+		-- require("transparent").clear_prefix("lualine")
 		require("transparent").clear_prefix("telescope")
 		require("transparent").clear_prefix("NvimTree")
 	end,
