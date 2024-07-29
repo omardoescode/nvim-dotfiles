@@ -1,5 +1,8 @@
 return {
 	"folke/which-key.nvim",
+	dependencies = {
+		"echasnovski/mini.ai",
+	},
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
@@ -10,26 +13,23 @@ return {
 		if not present then
 			return
 		end
-		wk.register({
-			-- add group
-			["<leader>"] = {
-				a = { name = "+harpoon" },
-				c = { name = "+code" },
-				e = { name = "+file explorer" },
-				f = { name = "+telescope" },
-				h = { name = "+hunks" },
-				l = { name = "+lazy & lazygit" },
-				m = { name = "+format" },
-				n = { name = "+search" },
-				o = { name = "+obsidian" },
-				r = { name = "+rename & restart" },
-				s = { name = "+splits" },
-				sn = { name = "+noice" },
-				t = { name = "+tabs & themes" },
-				u = { name = "+notifications" },
-				w = { name = "+workspace" },
-				x = { name = "+trouble" },
-			},
+		wk.add({
+			{ "<leader>a", group = "harpoon" },
+			{ "<leader>c", group = "code" },
+			{ "<leader>e", group = "file explorer" },
+			{ "<leader>f", group = "telescope" },
+			{ "<leader>h", group = "hunks" },
+			{ "<leader>l", group = "lazy & lazygit" },
+			{ "<leader>m", group = "format" },
+			{ "<leader>n", group = "search" },
+			{ "<leader>o", group = "obsidian" },
+			{ "<leader>r", group = "rename & restart" },
+			{ "<leader>s", group = "splits" },
+			{ "<leader>sn", group = "noice" },
+			{ "<leader>t", group = "tabs & themes" },
+			{ "<leader>u", group = "notifications" },
+			{ "<leader>w", group = "workspace" },
+			{ "<leader>x", group = "trouble" },
 		})
 	end,
 }
