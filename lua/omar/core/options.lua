@@ -36,3 +36,6 @@ vim.g.transparent = true
 opt.conceallevel = 2 -- conceal level
 
 opt.scrolloff = 5 -- scrolloff option
+
+-- remove status bar
+opt.laststatus = 0
