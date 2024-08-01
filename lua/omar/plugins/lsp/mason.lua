@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		"mfussenegger/nvim-lint",
 	},
 	config = function()
 		-- import mason
@@ -49,6 +50,8 @@ return {
 				"black", -- python formatter
 				-- "pylint", -- python linter
 				"eslint_d", -- js linter
+				"cmakelang",
+				"cmakelint",
 			},
 		})
 	end,

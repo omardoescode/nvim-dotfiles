@@ -46,6 +46,7 @@ return {
 				"c",
 				"cpp",
 				"java",
+				"cmake",
 			},
 			incremental_selection = {
 				enable = true,

@@ -147,18 +147,37 @@ return {
 			end,
 			["clangd"] = function()
 				lspconfig["clangd"].setup({
-					on_new_config = function(new_config, new_cwd)
-						local status, cmake = pcall(require, "cmake-tools")
-						if status then
-							cmake.clangd_on_new_config(new_config)
-						end
+					root_dir = function(fname)
+						return require("lspconfig.util").root_pattern(
+							"Makefile",
+							"configure.ac",
+							"configure.in",
+							"config.h.in",
+							"meson.build",
+							"meson_options.txt",
+							"build.ninja"
+						)(fname) or require("lspconfig.util").root_pattern(
+							"compile_commands.json",
+							"compile_flags.txt"
+						)(fname) or require("lspconfig.util").find_git_ancestor(fname)
 					end,
+					init_options = {
+						usePlaceholders = true,
+						completeUnimported = true,
+						clangdFileStatus = true,
+					},
+					cmd = {
+						-- see clangd --help-hidden
+						"clangd",
+						"--background-index",
+						"--clang-tidy",
+						"--completion-style=bundled",
+						"--cross-file-rename",
+						"--header-insertion=iwyu",
+					},
+					capabilities = capabilities,
 				})
 			end,
-			-- TODO:
-			-- Add a special handler for the clangd server
-			-- Don't forget adding clang-tidy
-			-- https://github.com/fitrh/init.nvim/blob/7127fbef569ee498b1cbfae62ef372050b07afbc/lua/lsp/config/clangd.lua#L14
 		})
 	end,
 }

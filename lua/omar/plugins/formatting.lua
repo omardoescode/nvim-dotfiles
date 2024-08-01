@@ -21,6 +21,7 @@ return {
 				python = { "isort", "black" },
 				["markdown"] = { { "prettierd", "prettier" }, "markdown-toc" },
 				["markdown.mdx"] = { { "prettierd", "prettier" }, "markdown-toc" },
+				cmake = { "cmakelang" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
