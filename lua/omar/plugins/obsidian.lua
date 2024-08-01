@@ -44,19 +44,19 @@ return {
 		},
 		daily_notes = {
 			-- Optional, if you keep daily notes in a separate directory.
-			folder = "08 - Review/081 - daily/",
+			folder = "reviews/daily",
 			-- Optional, if you want to change the date format for the ID of daily notes.
 			date_format = "%Y-%m-%d",
 			-- Optional, if you want to change the date format of the default alias of daily notes.
 			alias_format = "%B %-d, %Y",
 			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-			template = "TEMPLATE - daily.md",
+			template = "TEMPLATE - Daily.md",
 		},
 		templates = {
-			folder = "99 - Meta/992 - templates/",
+			folder = "Meta/Templates/",
 		},
 		attachments = {
-			img_folder = "99 - Meta/991 - attachments/",
+			img_folder = "Meta/Media",
 		},
 
 		-- see below for full list of options 👇

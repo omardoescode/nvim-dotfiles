@@ -49,7 +49,6 @@ return {
 			-- sources for autocompletion
 			-- Priotrized by order in here
 			sources = cmp.config.sources({
-				{ name = "codeium", priority = 100 },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
