@@ -22,6 +22,7 @@ return {
 				["markdown"] = { { "prettierd", "prettier" }, "markdown-toc" },
 				["markdown.mdx"] = { { "prettierd", "prettier" }, "markdown-toc" },
 				cmake = { "cmakelang" },
+				cpp = { "clang-format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
