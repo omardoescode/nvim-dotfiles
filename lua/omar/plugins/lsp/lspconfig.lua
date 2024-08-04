@@ -11,6 +11,9 @@ return {
 			marksman = {},
 		},
 	},
+	keys = {
+		{ "<leader>cw", "<cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Header / Source" },
+	},
 	config = function()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
