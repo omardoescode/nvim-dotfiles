@@ -1,7 +1,7 @@
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
-	build = ":Codeium Auth",
+	build = "",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/cmp-buffer", -- source for text in buffer

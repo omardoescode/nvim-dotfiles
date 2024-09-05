@@ -1,8 +1,9 @@
 return {
 	"nvimdev/lspsaga.nvim",
+	lazy = false,
 	keys = {
 		{
-			"<leader>ca",
+			"<eader>ca",
 			"<cmd>Lspsaga code_action<cr>",
 			desc = "Show code actions",
 		},

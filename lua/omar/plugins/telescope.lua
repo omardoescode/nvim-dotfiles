@@ -40,6 +40,7 @@ return {
 					".dist",
 					"package-lock.json",
 					".idea",
+					".cache",
 				},
 				mappings = {
 					i = {
@@ -56,11 +57,12 @@ return {
 		telescope.load_extension("undo")
 		telescope.load_extension("themes")
 		telescope.load_extension("neoclip")
+
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
 		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files in cwd" })
-		keymap.set("n", "<leader>fh", "<cmd>Telescope find_files no_ignore=true<cr>", { desc = "Find hidden files" })
+		keymap.set("n", "<leader>fa", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find hidden files" })
 		keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Find git files" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files" })
@@ -72,6 +74,7 @@ return {
 		keymap.set("n", "<leader>:", "<cmd>Telescope command_history<cr>", { desc = "Command History" })
 		keymap.set("n", "<leader>th", "<cmd>Telescope themes<cr>", { desc = "Change Themes" })
 		keymap.set("n", "<leader>tt", "<cmd>TransparentToggle<cr>", { desc = "Transparency Toggle" })
+
 		require("neoclip").setup({})
 	end,
 }

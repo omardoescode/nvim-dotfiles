@@ -1,1 +1,1 @@
-vim.cmd("colorscheme material-lighter")
+vim.cmd("colorscheme tokyonight-storm")

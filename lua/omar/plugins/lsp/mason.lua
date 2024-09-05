@@ -52,6 +52,7 @@ return {
 				"eslint_d", -- js linter
 				"cmakelang",
 				"cmakelint",
+				-- "cmake_language_server",
 			},
 		})
 	end,
