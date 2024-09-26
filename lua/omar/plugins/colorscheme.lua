@@ -158,4 +158,5 @@ return {
 	"rebelot/kanagawa.nvim",
 	"marko-cerovac/material.nvim",
 	"ellisonleao/gruvbox.nvim",
+	"akinsho/horizon.nvim",
 }

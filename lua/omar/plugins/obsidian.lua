@@ -53,13 +53,16 @@ return {
 			template = "TEMPLATE - Daily.md",
 		},
 		templates = {
-			folder = "Meta/Templates/",
+			folder = "Templates/",
 		},
 		attachments = {
-			img_folder = "Meta/Media",
+			img_folder = "Media",
+			confirm_img_paste = false,
+			img_name_func = function()
+				-- Prefix image names with timestamp.
+				return string.format("%s-", os.time())
+			end,
 		},
-
-		-- see below for full list of options 👇
 	},
 	keys = {
 		{

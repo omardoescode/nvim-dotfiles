@@ -3,7 +3,7 @@ return {
 	lazy = false,
 	keys = {
 		{
-			"<eader>ca",
+			"<leader>ca",
 			"<cmd>Lspsaga code_action<cr>",
 			desc = "Show code actions",
 		},
