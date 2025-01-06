@@ -26,9 +26,9 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				-- "tsserver",
-				-- "html",
-				-- "cssls",
+				"ts_ls",
+				"html",
+				"cssls",
 				"tailwindcss",
 				"svelte",
 				"lua_ls",
@@ -39,7 +39,6 @@ return {
 				"clangd",
 				"marksman",
 				"clangd",
-				-- "cmake-language-server"
 			},
 		})
 		mason_tool_installer.setup({

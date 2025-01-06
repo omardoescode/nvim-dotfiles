@@ -10,8 +10,8 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
-			cmake = { "cmakelint" },
-			cpp = { "clangtidy" },
+			-- cmake = { "cmakelint" },
+			-- cpp = { "clangtidy" },
 			-- python = { "pylint" },
 		}
 
