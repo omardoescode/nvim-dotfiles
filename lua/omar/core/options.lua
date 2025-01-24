@@ -35,7 +35,15 @@ vim.g.transparent = true
 
 opt.conceallevel = 2 -- conceal level
 
-opt.scrolloff = 5    -- scrolloff option
+opt.scrolloff = 5 -- scrolloff option
 
 -- remove status bar
 opt.laststatus = 0
+
+-- Folding Options
+vim.g.maplocalleader = ","
+opt.foldmethod = "expr"
+opt.foldexpr = "vimtex#fold#level(v:lnum)"
+opt.foldtext = "vimtex#fold#text()"
+-- I like to see at least the content of the sections upon opening
+opt.foldlevel = 2

@@ -21,7 +21,6 @@ return {
 				python = { "isort", "black" },
 				["markdown"] = { { "prettierd", "prettier" }, "markdown-toc" },
 				["markdown.mdx"] = { { "prettierd", "prettier" }, "markdown-toc" },
-				cmake = { "cmakelang" },
 				cpp = { "clang-format" },
 				sql = { "sql_formatter" },
 			},
