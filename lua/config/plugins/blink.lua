@@ -47,7 +47,7 @@ return {
 				auto_show_delay_ms = 200,
 			},
 			ghost_text = {
-				enabled = true,
+				enabled = false,
 			},
 		},
 		-- Default list of enabled providers defined so that you can extend it

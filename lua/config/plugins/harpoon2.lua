@@ -22,6 +22,10 @@ return {
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
 
+		for i = 1, 10 do
+			vim.keymap.set("n", "<leader>" + i, function() end)
+		end
+
 		-- Toggle previous & next buffers stored within Harpoon list
 		vim.keymap.set("n", "<C-p>", function()
 			harpoon:list():prev()
@@ -29,5 +33,49 @@ return {
 		vim.keymap.set("n", "<C-n>", function()
 			harpoon:list():next()
 		end)
+	end,
+	keys = function()
+		local keys = {
+			{
+				"<leader>a",
+				function()
+					require("harpoon"):list():add()
+				end,
+				desc = "Harpoon File",
+			},
+			{
+				"<C-e>",
+				function()
+					local harpoon = require("harpoon")
+					harpoon.ui:toggle_quick_menu(harpoon:list())
+				end,
+				desc = "Harpoon Quick Menu",
+			},
+			{
+				"<C-p>",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():prev()
+				end,
+			},
+			{
+				"<C-n>",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():next()
+				end,
+			},
+		}
+
+		for i = 1, 5 do
+			table.insert(keys, {
+				"<leader>" .. i,
+				function()
+					require("harpoon"):list():select(i)
+				end,
+				desc = "Harpoon to File " .. i,
+			})
+		end
+		return keys
 	end,
 }
