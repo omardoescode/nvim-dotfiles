@@ -147,5 +147,7 @@ return {
 		{ "<leader>csb", "<cmd>CMakeSelectBuildTarget<cr>", desc = "CMake Select Build Target" },
 		{ "<leader>csl", "<cmd>CMakeSelectLaunchTarget<cr>", desc = "CMake Select Lanuch Target" },
 		{ "<leader>cr", "<cmd>CMakeSelectLaunchTarget<cr>", desc = "CMake Select Lanuch Target" },
+		{ "<leader>cs", "<cmd>CMakeSettings<cr>", desc = "CMake Settings" },
+		{ "<leader>ct", "<cmd>CMakeTargetSettings<cr>", desc = "CMake Target Settings" },
 	},
 }
