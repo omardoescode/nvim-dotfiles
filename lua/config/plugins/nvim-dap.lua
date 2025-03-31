@@ -69,6 +69,17 @@ return {
 			dapui.close()
 		end
 		vim.keymap.set("n", "<Leader>dt", ":DapToggleBreakpoint<CR>")
+		vim.keymap.set("n", "<Leader>dn", function()
+			local condition = vim.fn.input("Breakpoint condition (leave empty to skip): ")
+			local log_message = vim.fn.input("Log message (leave empty to skip): ")
+			if condition ~= "" and log_message ~= "" then
+				require("dap").set_breakpoint(condition, nil, log_message)
+			elseif condition ~= "" then
+				require("dap").set_breakpoint(condition)
+			elseif log_message ~= "" then
+				require("dap").set_breakpoint(nil, nil, log_message)
+			end
+		end)
 		vim.keymap.set("n", "<Leader>dc", ":DapContinue<CR>")
 		vim.keymap.set("n", "<Leader>dx", ":DapTerminate<CR>")
 		vim.keymap.set("n", "<Leader>do", ":DapStepOver<CR>")
