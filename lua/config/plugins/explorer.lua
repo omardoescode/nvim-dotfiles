@@ -60,21 +60,19 @@ return {
 	},
 	keys = {
 		{
-			"<leader>fe",
+			"<leader>e",
 			function()
 				require("neo-tree.command").execute({ toggle = true, position = "right" })
 			end,
 			desc = "Explorer NeoTree (Root Dir)",
 		},
 		{
-			"<leader>fE",
+			"<leader>E",
 			function()
 				require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd(), position = "right" })
 			end,
 			desc = "Explorer NeoTree (cwd)",
 		},
-		{ "<leader>e", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
-		{ "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
 		{
 			"<leader>ge",
 			function()

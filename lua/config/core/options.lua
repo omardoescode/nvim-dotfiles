@@ -39,3 +39,7 @@ opt.scrolloff = 5 -- scrolloff option
 
 -- remove status bar
 opt.laststatus = 0
+
+-- undofile options
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
