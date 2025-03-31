@@ -23,3 +23,4 @@ require("lazy").setup({ { import = "config.plugins" }, { import = "config.plugin
 })
 
 vim.keymap.set("n", "<leader>ll", ":Lazy<cr>", { desc = "Pacakge manager" })
+vim.keymap.set("n", "<leader>lm", ":Mason<cr>", { desc = "Mason" })
