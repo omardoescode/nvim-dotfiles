@@ -1,11 +1,8 @@
 return {
 	"goolord/alpha-nvim",
-	event = "VimEnter",
 	config = function()
-		local alpha = require("alpha")
-		local theme = require("alpha.themes.startify")
-
-		-- Send config to alpha
-		alpha.setup(theme.opts)
+		local theta = require("alpha.themes.theta")
+		theta.file_icons.provider = "devicons"
+		require("alpha").setup(theta.config)
 	end,
 }

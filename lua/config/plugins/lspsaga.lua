@@ -18,27 +18,27 @@ return {
 			desc = "Next Diagnostic",
 		},
 		{
-			"<leader>d",
+			"<a-d>",
 			"<cmd>Lspsaga show_line_diagnostics<cr>",
 			desc = "Show Line Diagnostic",
 		},
 		{
-			"<leader>D",
+			"<a-D>",
 			"<cmd>Lspsaga show_buf_diagnostics<cr>",
 			desc = "Show Buffer Diagnostic",
 		},
 		{
-			"<leader>gf",
+			"gf",
 			"<cmd>Lspsaga finder<cr>",
 			desc = "Lspsaga Finder",
 		},
 		{
-			"<leader>gi",
+			"gi",
 			"<cmd>Lspsaga finder imp<cr>",
 			desc = "Lspsaga Finder Implementation",
 		},
 		{
-			"<leader>gd",
+			"gd",
 			"<cmd>Lspsaga goto_definition<cr>",
 			desc = "Go to definition",
 		},

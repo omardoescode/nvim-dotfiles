@@ -5,7 +5,6 @@ return {
 	opts = function(_, opts)
 		local fzf = require("fzf-lua")
 		local config = fzf.config
-		local actions = fzf.actions
 
 		-- Quickfix
 		config.defaults.keymap.fzf["ctrl-q"] = "select-all+accept"
@@ -18,8 +17,7 @@ return {
 		config.defaults.keymap.builtin["<c-b>"] = "preview-page-up"
 	end,
 	keys = {
-		-- { "<leader>f", "<cmd>FzfLua files<cr>", desc = "Find in files" },
+		{ "<leader>i", "<cmd>FzfLua files<cr>", desc = "Find in files" },
 		{ "<leader>/", "<cmd>FzfLua grep_project<cr>", desc = "Live Grep" },
-		-- { "<leader>th", "<cmd>FzfLua colorschemes<cr>", desc = "Live Grep" },
 	},
 }

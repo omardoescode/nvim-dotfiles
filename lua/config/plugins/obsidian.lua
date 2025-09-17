@@ -84,7 +84,7 @@ return {
 			desc = "Open Yesterday Note",
 		},
 		{
-			"<leader>fot",
+			"<leader>ot",
 			":ObsidianTags<cr>",
 			desc = "Search Obsidian Tags",
 		},
