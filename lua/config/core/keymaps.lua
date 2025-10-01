@@ -26,3 +26,5 @@ keymap.set("n", "<a-j>", "<C-w>-", { desc = "Resize window to smaller size verti
 -- Buffers
 keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous Buffer" })
+
+vim.keymap.set("n", "<c-w>", ":bd<CR>", { desc = "Close buffer" })
