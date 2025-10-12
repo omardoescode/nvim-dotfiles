@@ -230,4 +230,5 @@ return {
 			})
 		end,
 	},
+	{ "datsfilipe/vesper.nvim" },
 }

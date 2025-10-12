@@ -7,6 +7,7 @@ return {
 				"rose-pine",
 				"rose-pine-dawn",
 				"rose-pine-moon",
+				"vesper",
 				"sonokai",
 				"tokyonight-night",
 				"tokyonight-storm",
