@@ -43,3 +43,5 @@ opt.laststatus = 0
 -- undofile options
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+vim.opt.backupcopy = "yes"
