@@ -2,7 +2,7 @@ return {
 	"ibhagwan/fzf-lua",
 	lazy = false,
 	dependencies = { "echasnovski/mini.icons" },
-	opts = function(_, opts)
+	opts = function(_)
 		local fzf = require("fzf-lua")
 		local config = fzf.config
 
@@ -19,5 +19,7 @@ return {
 	keys = {
 		{ "<leader>i", "<cmd>FzfLua files<cr>", desc = "Find in files" },
 		{ "<leader>/", "<cmd>FzfLua grep_project<cr>", desc = "Live Grep" },
+		{ "<leader>co", "<cmd>FzfLua lsp_document_symbols<cr>", desc = "Search Symbols" },
+		{ "<leader>cp", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Search Symbols" },
 	},
 }

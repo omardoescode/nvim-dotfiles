@@ -48,7 +48,7 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				-- transparent_background = vim.g.transparent, -- disables setting the background color.
+				transparent_background = vim.g.transparent, -- disables setting the background color.
 				show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
 				term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {
@@ -103,7 +103,7 @@ return {
 			require("solarized-osaka").setup({
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
-				-- transparent = vim.g.transparent, -- Enable this to disable setting the background color
+				transparent = true, -- Enable this to disable setting the background color
 				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 				styles = {
 					-- Style to be applied to different syntax groups
@@ -140,7 +140,7 @@ return {
 		"sainnhe/sonokai",
 		priority = 1000,
 		config = function()
-			-- vim.g.sonokai_transparent_background = vim.g.transparent
+			vim.g.sonokai_transparent_background = vim.g.transparent
 			vim.g.sonokai_enable_italic = 1
 			vim.g.sonokai_style = "andromeda"
 		end,
@@ -158,7 +158,6 @@ return {
 	"rebelot/kanagawa.nvim",
 	"marko-cerovac/material.nvim",
 	"ellisonleao/gruvbox.nvim",
-	"akinsho/horizon.nvim",
 	{
 		"AstroNvim/astrotheme",
 		config = function()
@@ -231,4 +230,5 @@ return {
 		end,
 	},
 	{ "datsfilipe/vesper.nvim" },
+	{ "HUAHUAI23/nvim-quietlight" },
 }

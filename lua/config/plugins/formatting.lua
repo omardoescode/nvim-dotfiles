@@ -3,6 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local conform = require("conform")
+		vim.g.conform_log_level = "DEBUG"
 
 		conform.setup({
 			formatters_by_ft = {
@@ -28,6 +29,21 @@ return {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 1000,
+			},
+			formatters = {
+				prettier = {
+					command = function(self, ctx)
+						local local_prettier = vim.fn.findfile("node_modules/.bin/prettier", ctx.dirname .. ";~")
+						return local_prettier ~= "" and vim.fn.fnamemodify(local_prettier, ":p") or "prettier"
+					end,
+					cwd = require("conform.util").root_file({
+						".prettierrc",
+						".prettierrc.json",
+						".prettierrc.js",
+						"prettier.config.js",
+						"package.json",
+					}),
+				},
 			},
 		})
 

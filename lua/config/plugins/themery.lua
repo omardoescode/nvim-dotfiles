@@ -34,6 +34,7 @@ return {
 				"astrolight",
 				"astromars",
 				"astrotheme",
+				"quietlight",
 			},
 		})
 	end,
