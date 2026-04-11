@@ -34,6 +34,15 @@ return {
 			return "  " .. stats.loaded .. "/" .. stats.count .. " plugins loaded"
 		end
 
+		dashboard.config.layout = {
+			{ type = "padding", val = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) / 4) }) },
+			dashboard.section.header,
+			{ type = "padding", val = 2 },
+			dashboard.section.buttons,
+			{ type = "padding", val = 1 },
+			dashboard.section.footer,
+		}
+
 		alpha.setup(dashboard.config)
 	end,
 }
