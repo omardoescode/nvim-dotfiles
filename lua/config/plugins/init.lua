@@ -1,4 +1,12 @@
 return {
-  "nvim-lua/plenary.nvim", -- lua function that many plugins use
-  "christoomey/vim-tmux-navigator", -- tmux & split window navigation
+  "nvim-lua/plenary.nvim",
+  {
+    "christoomey/vim-tmux-navigator",
+    keys = {
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>" },
+    },
+  },
 }

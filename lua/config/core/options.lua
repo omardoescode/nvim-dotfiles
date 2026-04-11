@@ -45,3 +45,7 @@ vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.backupcopy = "yes"
+
+opt.updatetime = 250
+opt.swapfile = false
+opt.ttimeoutlen = 10

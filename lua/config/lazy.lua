@@ -13,12 +13,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "config.plugins" }, { import = "config.plugins.lsp" } }, {
+	install = {
+		colorscheme = { "habamax" },
+	},
 	change_detection = {
 		notify = false,
 	},
 	checker = {
-		enabled = true,
-		notify = false,
+		enabled = false,
 	},
 })
 

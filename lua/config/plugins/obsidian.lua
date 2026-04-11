@@ -100,7 +100,7 @@ return {
 			"<leader>oln",
 			function()
 				local title = vim.fn.input("Note Title: ")
-				vim.cmd("ObsidianLinkNew" .. title)
+				vim.cmd("ObsidianLinkNew " .. title)
 			end,
 			desc = "Convert text into link",
 			mode = { "n", "v" },
