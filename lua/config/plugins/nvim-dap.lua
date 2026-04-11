@@ -4,6 +4,29 @@ return {
 		"nvim-neotest/nvim-nio",
 		"rcarriga/nvim-dap-ui",
 	},
+	keys = {
+		{ "<Leader>dt", "<cmd>DapToggleBreakpoint<CR>", desc = "Toggle Breakpoint" },
+		{ "<Leader>dc", "<cmd>DapContinue<CR>", desc = "DAP Continue" },
+		{ "<Leader>dx", "<cmd>DapTerminate<CR>", desc = "DAP Terminate" },
+		{ "<Leader>do", "<cmd>DapStepOver<CR>", desc = "DAP Step Over" },
+		{
+			"<Leader>dn",
+			function()
+				local dap = require("dap")
+				local condition = vim.fn.input("Breakpoint condition (leave empty to skip): ")
+				local log_message = vim.fn.input("Log message (leave empty to skip): ")
+				local hit_condition = nil
+				if condition ~= "" and log_message ~= "" then
+					dap.set_breakpoint(condition, hit_condition, log_message)
+				elseif condition ~= "" then
+					dap.set_breakpoint(condition, hit_condition)
+				elseif log_message ~= "" then
+					dap.set_breakpoint(nil, hit_condition, log_message)
+				end
+			end,
+			desc = "Conditional Breakpoint",
+		},
+	},
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
@@ -12,7 +35,7 @@ return {
 			dap.adapters["cppdbg"] = {
 				id = "cppdbg",
 				type = "executable",
-				command = "/home/omar/.vscode/extensions/ms-vscode.cpptools-1.23.6-linux-x64/debugAdapters/bin/OpenDebugAD7",
+				command = vim.fn.glob(vim.fn.expand("~") .. "/.vscode/extensions/ms-vscode.cpptools-*/debugAdapters/bin/OpenDebugAD7"),
 			}
 		end
 		dap.configurations["cpp"] = {
@@ -68,21 +91,5 @@ return {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
-		vim.keymap.set("n", "<Leader>dt", ":DapToggleBreakpoint<CR>")
-		vim.keymap.set("n", "<Leader>dn", function()
-			local condition = vim.fn.input("Breakpoint condition (leave empty to skip): ")
-			local log_message = vim.fn.input("Log message (leave empty to skip): ")
-			local hit_condition = nil
-			if condition ~= "" and log_message ~= "" then
-				dap.set_breakpoint(condition, hit_condition, log_message)
-			elseif condition ~= "" then
-				dap.set_breakpoint(condition, hit_condition)
-			elseif log_message ~= "" then
-				dap.set_breakpoint(nil, hit_condition, log_message)
-			end
-		end)
-		vim.keymap.set("n", "<Leader>dc", ":DapContinue<CR>")
-		vim.keymap.set("n", "<Leader>dx", ":DapTerminate<CR>")
-		vim.keymap.set("n", "<Leader>do", ":DapStepOver<CR>")
 	end,
 }

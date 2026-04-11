@@ -10,10 +10,15 @@ return {
 
 		local ts_context_commentstring = require("ts_context_commentstring.integrations.comment_nvim")
 
-		-- enable comment
+		local hook = ts_context_commentstring.create_pre_hook()
+
 		comment.setup({
-			-- for commenting tsx, jsx, svelte, html files
-			pre_hook = ts_context_commentstring.create_pre_hook(), -- setup the integration between them
+			pre_hook = function(...)
+				local ok, result = pcall(hook, ...)
+				if ok then
+					return result
+				end
+			end,
 		})
 	end,
 }

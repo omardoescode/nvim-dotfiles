@@ -1,6 +1,5 @@
 return {
 	"ibhagwan/fzf-lua",
-	lazy = false,
 	dependencies = { "echasnovski/mini.icons" },
 	opts = function(_)
 		local fzf = require("fzf-lua")
@@ -17,7 +16,7 @@ return {
 		config.defaults.keymap.builtin["<c-b>"] = "preview-page-up"
 	end,
 	keys = {
-		{ "<leader>i", "<cmd>FzfLua files<cr>", desc = "Find in files" },
+		{ "<leader>i", function() require("fzf-lua").files({ fd_opts = "--no-ignore --hidden --exclude node_modules --exclude .next --exclude build --exclude dist --exclude .git" }) end, desc = "Find in files" },
 		{ "<leader>/", "<cmd>FzfLua grep_project<cr>", desc = "Live Grep" },
 		{ "<leader>co", "<cmd>FzfLua lsp_document_symbols<cr>", desc = "Search Symbols" },
 		{ "<leader>cp", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Search Symbols" },

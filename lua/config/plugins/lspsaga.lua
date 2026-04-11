@@ -1,6 +1,5 @@
 return {
 	"nvimdev/lspsaga.nvim",
-	lazy = false,
 	keys = {
 		{
 			"<leader>ca",

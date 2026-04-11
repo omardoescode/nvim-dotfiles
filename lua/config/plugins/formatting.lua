@@ -3,8 +3,6 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local conform = require("conform")
-		vim.g.conform_log_level = "DEBUG"
-
 		conform.setup({
 			formatters_by_ft = {
 				javascript = { "prettier" },
@@ -20,14 +18,14 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
-				["markdown"] = { { "prettierd", "prettier" }, "markdown-toc" },
-				["markdown.mdx"] = { { "prettierd", "prettier" }, "markdown-toc" },
+				["markdown"] = { "prettierd", "prettier", "markdown-toc", stop_after_first = true },
+				["markdown.mdx"] = { "prettierd", "prettier", "markdown-toc", stop_after_first = true },
 				cpp = { "clang-format" },
 				sql = { "sql_formatter" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
-				async = false,
+				async = true,
 				timeout_ms = 1000,
 			},
 			formatters = {
