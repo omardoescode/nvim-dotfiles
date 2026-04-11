@@ -59,7 +59,7 @@ return {
 				auto_save = true,
 			},
 			symbol_in_winbar = {
-				enable = false,
+				enable = true,
 			},
 		})
 	end,

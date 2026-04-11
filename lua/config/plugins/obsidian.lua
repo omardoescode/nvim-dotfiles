@@ -73,7 +73,7 @@ return {
 				local title = vim.fn.input("Note Title: ")
 				vim.cmd("ObsidianNew " .. title)
 			end,
-			desc = "Open Tomorrow Note",
+			desc = "New Note",
 		},
 		{
 			"<leader>oy",

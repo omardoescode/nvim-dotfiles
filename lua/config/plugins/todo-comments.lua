@@ -18,7 +18,7 @@ return {
 
 		keymap.set("n", "<leader>ft", function()
 			vim.cmd("TodoFzf")
-		end, { desc = "Previous todo comment" })
+		end, { desc = "Search todos" })
 
 		todo_comments.setup()
 	end,
