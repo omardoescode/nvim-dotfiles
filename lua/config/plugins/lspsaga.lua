@@ -51,7 +51,7 @@ return {
 			"<cmd>Lspsaga hover_doc<cr>",
 			desc = "Show documentation for what is under cursor",
 		},
-		{ "t", "<cmd>Lspsaga term_toggle<cr>", desc = "float terminal" },
+		{ "<C-\\>", "<cmd>Lspsaga term_toggle<cr>", desc = "float terminal" },
 	},
 	config = function()
 		require("lspsaga").setup({
