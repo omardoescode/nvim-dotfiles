@@ -28,3 +28,9 @@ keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous Buffer" })
 
 vim.keymap.set("n", "<c-w>", ":bd<CR>", { desc = "Close buffer" })
+
+-- Move lines up/down
+keymap.set("n", "J", "<cmd>m .+1<CR>==", { desc = "Move line down" })
+keymap.set("n", "K", "<cmd>m .-2<CR>==", { desc = "Move line up" })
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })

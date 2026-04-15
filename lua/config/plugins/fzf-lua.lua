@@ -65,6 +65,9 @@ return {
 			diagnostics = {
 				winopts = { preview = { layout = "vertical" } },
 			},
+			lsp = {
+				file_ignore_patterns = { "node_modules", "/usr/lib/", "/build/", "%.next/", "/dest/", "/dist/", "%.cache/", "%.turbo/", "%.svelte%-kit/", "%.nuxt/" },
+			},
 			keymaps = {
 				winopts = { preview = { layout = "vertical" } },
 			},

@@ -30,10 +30,9 @@ return {
 				"StatusLineNC",
 				"EndOfBuffer",
 			},
-			extra_groups = { -- additional groups for plugins
-				"NeoTreeNormal", -- Neo-tree normal background
-				"NeoTreeNormalNC", -- Neo-tree normal background for inactive windows
-				-- Add other plugin-specific groups here if needed
+			extra_groups = {
+				"NeoTreeNormal",
+				"NeoTreeNormalNC",
 			},
 			exclude_groups = {}, -- groups you don't want to clear
 		})

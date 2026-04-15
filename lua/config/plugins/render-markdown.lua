@@ -3,5 +3,11 @@ return {
 	ft = "markdown",
 	---@module 'render-markdown'
 	---@type render.md.UserConfig
-	opts = {},
+	opts = {
+		overrides = {
+			buftype = {
+				nofile = { enabled = false },
+			},
+		},
+	},
 }

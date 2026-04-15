@@ -1,5 +1,6 @@
 return {
 	"nvimdev/lspsaga.nvim",
+	event = "LspAttach",
 	keys = {
 		{
 			"<leader>ca",
@@ -47,7 +48,7 @@ return {
 			desc = "Smart Rename",
 		},
 		{
-			"K",
+			"<leader>k",
 			"<cmd>Lspsaga hover_doc<cr>",
 			desc = "Show documentation for what is under cursor",
 		},
@@ -60,7 +61,29 @@ return {
 			},
 			symbol_in_winbar = {
 				enable = true,
+				separator = " › ",
 			},
 		})
+
+		local saga_groups = {
+			"SagaWinbar",
+			"SagaWinbarSep",
+			"SagaWinbarFileName",
+			"SagaWinbarFolderName",
+			"SagaWinbarFolder",
+			"WinBar",
+			"WinBarNC",
+		}
+		local function clear_saga_bg()
+			for _, group in ipairs(saga_groups) do
+				local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group })
+				if ok and next(hl) then
+					hl.bg = nil
+					vim.api.nvim_set_hl(0, group, hl)
+				end
+			end
+		end
+		clear_saga_bg()
+		vim.api.nvim_create_autocmd("ColorScheme", { callback = clear_saga_bg })
 	end,
 }
