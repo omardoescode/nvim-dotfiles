@@ -30,11 +30,7 @@ return {
 				"material-palenight",
 				"material-lighter",
 				"material-darker",
-				"astrodark",
-				"astrojupiter",
-				"astrolight",
-				"astromars",
-				"astrotheme",
+				"oxocarbon",
 				"quietlight",
 			},
 		})

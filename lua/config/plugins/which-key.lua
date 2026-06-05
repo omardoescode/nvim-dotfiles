@@ -19,6 +19,7 @@ return {
 			{ "<leader>e", group = "file explorer" },
 			{ "<leader>f", group = "fzf_lua" },
 			{ "<leader>h", group = "hunks" },
+			{ "<leader>j", group = "ai/claude" },
 			{ "<leader>l", group = "lazy & lazygit" },
 			{ "<leader>m", group = "format" },
 			{ "<leader>n", group = "search" },

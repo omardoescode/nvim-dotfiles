@@ -98,34 +98,25 @@ return {
 			vim.g.sonokai_style = "andromeda"
 		end,
 	},
+	{ "akinsho/horizon.nvim", version = "*" },
 	{ "Shatur/neovim-ayu", name = "ayu", lazy = true },
 	{ "rebelot/kanagawa.nvim", lazy = true },
 	{ "marko-cerovac/material.nvim", lazy = true },
 	{ "ellisonleao/gruvbox.nvim", lazy = true },
 	{
-		"AstroNvim/astrotheme",
+		"datsfilipe/vesper.nvim",
 		lazy = true,
-		config = function()
-			require("astrotheme").setup({
-				palette = "astrodark",
-				background = { light = "astrolight", dark = "astrodark" },
-				style = {
-					transparent = false,
-					inactive = true,
-					float = true,
-					neotree = true,
-					border = true,
-					title_invert = true,
-					italic_comments = true,
-					simple_syntax_colors = true,
-				},
-				termguicolors = true,
-				terminal_color = true,
-				plugin_default = "auto",
-				plugins = { ["bufferline.nvim"] = false },
-			})
-		end,
+		opts = {
+			transparent = false, -- Boolean: Sets the background to transparent
+			italics = {
+				comments = false, -- Boolean: Italicizes comments
+				keywords = false, -- Boolean: Italicizes keywords
+				functions = false, -- Boolean: Italicizes functions
+				strings = false, -- Boolean: Italicizes strings
+				variables = false, -- Boolean: Italicizes variables
+			},
+		},
 	},
-	{ "datsfilipe/vesper.nvim", lazy = true },
 	{ "HUAHUAI23/nvim-quietlight", lazy = true },
+	{ "nyoom-engineering/oxocarbon.nvim" },
 }

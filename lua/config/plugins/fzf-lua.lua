@@ -15,6 +15,18 @@ return {
 		config.defaults.keymap.builtin["<c-b>"] = "preview-page-up"
 
 		return {
+			file_ignore_patterns = {
+				"node_modules",
+				"/usr/lib/",
+				"/build/",
+				"%.next/",
+				"/dest/",
+				"/dist/",
+				"%.cache/",
+				"%.turbo/",
+				"%.svelte%-kit/",
+				"%.nuxt/",
+			},
 			fzf_opts = {
 				["--layout"] = "default",
 				["--cycle"] = true,
@@ -65,9 +77,6 @@ return {
 			diagnostics = {
 				winopts = { preview = { layout = "vertical" } },
 			},
-			lsp = {
-				file_ignore_patterns = { "node_modules", "/usr/lib/", "/build/", "%.next/", "/dest/", "/dist/", "%.cache/", "%.turbo/", "%.svelte%-kit/", "%.nuxt/" },
-			},
 			keymaps = {
 				winopts = { preview = { layout = "vertical" } },
 			},
@@ -82,12 +91,26 @@ return {
 		}
 	end,
 	keys = {
-		{ "<leader>i", function() require("fzf-lua").files({ fd_opts = "--no-ignore --hidden --exclude node_modules --exclude .next --exclude build --exclude dist --exclude .git" }) end, desc = "Find files" },
+		{
+			"<leader>i",
+			function()
+				require("fzf-lua").files({
+					fd_opts = "--no-ignore --hidden --exclude node_modules --exclude .next --exclude build --exclude dist --exclude .git",
+				})
+			end,
+			desc = "Find files",
+		},
 		{ "<leader>/", "<cmd>FzfLua grep_project<cr>", desc = "Live Grep" },
 		{ "<leader>co", "<cmd>FzfLua lsp_document_symbols<cr>", desc = "Document Symbols" },
 		{ "<leader>cp", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Workspace Symbols" },
 		{ "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
-		{ "<leader>fr", function() require("fzf-lua").oldfiles({ cwd_only = true }) end, desc = "Recent Files (project)" },
+		{
+			"<leader>fr",
+			function()
+				require("fzf-lua").oldfiles({ cwd_only = true })
+			end,
+			desc = "Recent Files (project)",
+		},
 		{ "<leader>fR", "<cmd>FzfLua oldfiles<cr>", desc = "Recent Files (all)" },
 		{ "<leader>fl", "<cmd>FzfLua resume<cr>", desc = "Resume Last Picker" },
 		{ "<leader>fd", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics" },
