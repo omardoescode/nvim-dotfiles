@@ -119,4 +119,5 @@ return {
 	},
 	{ "HUAHUAI23/nvim-quietlight", lazy = true },
 	{ "nyoom-engineering/oxocarbon.nvim" },
+	{ "stevedylandev/darkmatter-nvim", lazy = true },
 }
