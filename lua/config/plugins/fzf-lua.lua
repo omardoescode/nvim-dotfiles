@@ -102,7 +102,7 @@ return {
 		},
 		{ "<leader>/", "<cmd>FzfLua grep_project<cr>", desc = "Live Grep" },
 		{ "<leader>co", "<cmd>FzfLua lsp_document_symbols<cr>", desc = "Document Symbols" },
-		{ "<leader>cp", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Workspace Symbols" },
+		{ "<leader>cp", "<cmd>FzfLua lsp_live_workspace_symbols<cr>", desc = "Workspace Symbols" },
 		{ "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
 		{
 			"<leader>fr",
